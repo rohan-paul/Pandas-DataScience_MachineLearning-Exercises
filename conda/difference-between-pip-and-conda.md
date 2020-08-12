@@ -1,5 +1,15 @@
 ### Difference-1 - high-level points.
 
+pip is a package manager that facilitates installation, upgrade, and uninstallation of **python packages**. It also works with virtual **python** environments.
+
+conda is a package manager for **any software** (installation, upgrade and uninstallation). It also works with virtual **system** environments.
+
+One of the goals with the design of conda is to facilitate package management for the entire software stack required by users, of which one or more python versions may only be a small part. This includes low-level libraries, such as linear algebra, compilers, such as mingw on Windows, editors, version control tools like Hg and Git, or _whatever else requires distribution and management_.
+
+For version management, pip allows you to switch between and manage multiple **python** environments.
+
+Conda allows you to switch between and manage **multiple general purpose environments** across which multiple other things can vary in version number, like C-libraries, or compilers, or test-suites, or database engines and so on.
+
 ## pip
 
 - Python packages only.
@@ -16,16 +26,6 @@ In both cases:
 
 - Written in Python
 - Open source (Conda is BSD and pip is MIT)
-
-pip is a package manager that facilitates installation, upgrade, and uninstallation of **python packages**. It also works with virtual **python** environments.
-
-conda is a package manager for **any software** (installation, upgrade and uninstallation). It also works with virtual **system** environments.
-
-One of the goals with the design of conda is to facilitate package management for the entire software stack required by users, of which one or more python versions may only be a small part. This includes low-level libraries, such as linear algebra, compilers, such as mingw on Windows, editors, version control tools like Hg and Git, or _whatever else requires distribution and management_.
-
-For version management, pip allows you to switch between and manage multiple **python** environments.
-
-Conda allows you to switch between and manage **multiple general purpose environments** across which multiple other things can vary in version number, like C-libraries, or compilers, or test-suites, or database engines and so on.
 
 Conda is not Windows-centric, but on Windows it is by far the superior solution currently available when complex scientific packages requiring compilation are required to be installed and managed.
 
