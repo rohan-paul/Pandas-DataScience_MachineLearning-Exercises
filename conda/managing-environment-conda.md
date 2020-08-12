@@ -1,3 +1,14 @@
+### What is an Environment
+
+An environment is a way of starting with a new Python installation, that doesn't look at your already installed packages. In this way, it simulates having a fresh install of Python. If two applications require different versions of Python, you can simply create different environments for them. If you start from a fresh environment and install as you go, you are able to generate a list of all packages installed in the environment so that others can easily duplicate it.
+
+There are few steps to using an environment (with a third step needed if you want to use Jupyter notebooks)
+
+- Creating the environment, either from scratch (a new project) or from a yaml file (duplicating an environment)
+- Activating the environment for use.
+- Register the environment with Jupyter.
+- To leave an environment, we have to deactivate it.
+
 #### Anaconda Python: where are the virtual environments stored?
 
 Simple Ans - Your environments are located in `**Anaconda3\envs\<yourEnv_directory>\**`
@@ -16,11 +27,7 @@ https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environme
 
 With conda, you can create, export, list, remove, and update environments that have different versions of Python and/or packages installed in them. Switching or moving between environments is called activating the environment. You can also share an environment file.
 
-`conda activate` and `conda deactivate` only work on conda 4.6 and later versions. For conda versions prior to 4.6, run:
-
-Windows: `activate` or `deactivate`
-
-Linux and macOS: `source activate` or `source deactivate`
+---
 
 ### create a Python virtual environment
 
@@ -32,7 +39,7 @@ The above line literally says: Create an environment using the conda create comm
 
 **conda create --clone py35 --name py35-2**
 
-#### Downloading from specific Channel
+### Downloading from specific Channel while creating a new environment
 
 When I run below to install [**jupyterlab/debugger**](https://github.com/jupyterlab/debugger)
 
@@ -46,9 +53,41 @@ Then, run the following command to install the extension:
 
 `jupyter labextension install @jupyterlab/debugger`
 
+---
+
+### Activating my new environment
+
+`conda activate` and `conda deactivate` only work on conda 4.6 and later versions. For conda versions prior to 4.6, run:
+
+Windows: `activate` or `deactivate`
+
+Linux and macOS: `source activate` or `source deactivate`
+
+### Connecting my new environment with Jupyter
+
+If you want Jupyter notebooks to see your new environment, you need a couple of extra instructions. Jupyter sees the different environments as different kernels. Once we create a new environment, we need to tell Jupyter that it is there:
+
+# Note you'll want to do this in the new environment.
+
+# First we will need the ipykernel package
+
+**`(test_env) $ conda install ipykernel`**
+
+# This tells jupyter to take the current environment (test_env)
+
+# and make a "kernel" option named "test kernel" in the
+
+# kernel menu
+
+**`(test_env) $ python -m ipykernel install --user --name myenv --display-name "test kernel"`**
+
+---
+
 ### To delete or remove the environment, type the following in your terminal:
 
 `conda remove --name env_name --all`
+
+---
 
 #### I installed several conda packages in `/usr/local/pkgs`, and created a new environment with `conda create --name env1`. Will this environment by default include all the packages in `/usr/local/pkgs`, or will it include only the packages that are shipped by default with conda?
 
