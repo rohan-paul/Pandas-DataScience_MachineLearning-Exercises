@@ -11,3 +11,5 @@ To verify that the copy was made:
 `conda info --envs`
 
 In the environments list that displays, you should see both the source environment and the new copy.
+
+#### Does cloning takes up extra space ?
