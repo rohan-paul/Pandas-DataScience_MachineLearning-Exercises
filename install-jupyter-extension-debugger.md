@@ -1,24 +1,38 @@
 ### Installation following official guide
 
-And I got a very long list of packages to be installed like below
+It is generally recommended to create a new `conda` environment to install the dependencies:
+
+```bash
+conda create -n jupyterlab-debugger -c conda-forge xeus-python=0.8.0 notebook=6 jupyterlab=2 ptvsd nodejs
+conda activate jupyterlab-debugger
+```
+
+Then, run the following command to install the extension:
+
+```bash
+jupyter labextension install @jupyterlab/debugger
+```
+
+#### Special Note
+
+**And after running below command**
+
+`conda create -n jupyterlab-debugger -c conda-forge xeus-python=0.8.0 notebook=6 jupyterlab=2 ptvsd nodejs`
+
+**I got a very long list of packages to be installed like below**
 
 ```
+
 Collecting package metadata (current_repodata.json): done
 Solving environment: failed with repodata from current_repodata.json, will retry with next repodata source.
 Collecting package metadata (repodata.json): done
 Solving environment: done
 
-## Package Plan ##
+## Package Plan
 
-  environment location: /home/paul/anaconda3/envs/jupyterlab-debugger
+environment location: /home/paul/anaconda3/envs/jupyterlab-debugger
 
-  added / updated specs:
-    - jupyterlab=2
-    - nodejs
-    - notebook=6
-    - ptvsd
-    - xeus-python=0.8.0
-
+added / updated specs: - jupyterlab=2 - nodejs - notebook=6 - ptvsd - xeus-python=0.8.0
 
 The following packages will be downloaded:
 
@@ -119,96 +133,96 @@ The following packages will be downloaded:
 
 The following NEW packages will be INSTALLED:
 
-  _libgcc_mutex      conda-forge/linux-64::_libgcc_mutex-0.1-conda_forge
-  _openmp_mutex      conda-forge/linux-64::_openmp_mutex-4.5-1_gnu
-  argon2-cffi        conda-forge/linux-64::argon2-cffi-20.1.0-py38h1e0a361_1
-  attrs              conda-forge/noarch::attrs-19.3.0-py_0
-  backcall           conda-forge/noarch::backcall-0.2.0-pyh9f0ad1d_0
-  backports          conda-forge/noarch::backports-1.0-py_2
-  backports.functoo~ conda-forge/noarch::backports.functools_lru_cache-1.6.1-py_0
-  bleach             conda-forge/noarch::bleach-3.1.5-pyh9f0ad1d_0
-  brotlipy           conda-forge/linux-64::brotlipy-0.7.0-py38h1e0a361_1000
-  ca-certificates    conda-forge/linux-64::ca-certificates-2020.6.20-hecda079_0
-  certifi            conda-forge/linux-64::certifi-2020.6.20-py38h32f6830_0
-  cffi               conda-forge/linux-64::cffi-1.14.1-py38h5bae8af_0
-  chardet            conda-forge/linux-64::chardet-3.0.4-py38h32f6830_1006
-  cryptography       conda-forge/linux-64::cryptography-3.0-py38h766eaa4_0
-  decorator          conda-forge/noarch::decorator-4.4.2-py_0
-  defusedxml         conda-forge/noarch::defusedxml-0.6.0-py_0
-  entrypoints        conda-forge/linux-64::entrypoints-0.3-py38h32f6830_1001
-  icu                conda-forge/linux-64::icu-67.1-he1b5a44_0
-  idna               conda-forge/noarch::idna-2.10-pyh9f0ad1d_0
-  importlib-metadata conda-forge/linux-64::importlib-metadata-1.7.0-py38h32f6830_0
-  importlib_metadata conda-forge/noarch::importlib_metadata-1.7.0-0
-  ipykernel          conda-forge/linux-64::ipykernel-5.3.4-py38h23f93f0_0
-  ipython            conda-forge/linux-64::ipython-7.17.0-py38h1cdfbd6_0
-  ipython_genutils   conda-forge/noarch::ipython_genutils-0.2.0-py_1
-  jedi               conda-forge/linux-64::jedi-0.15.2-py38_0
-  jinja2             conda-forge/noarch::jinja2-2.11.2-pyh9f0ad1d_0
-  json5              conda-forge/noarch::json5-0.9.4-pyh9f0ad1d_0
-  jsonschema         conda-forge/linux-64::jsonschema-3.2.0-py38h32f6830_1
-  jupyter_client     conda-forge/noarch::jupyter_client-6.1.6-py_0
-  jupyter_core       conda-forge/linux-64::jupyter_core-4.6.3-py38h32f6830_1
-  jupyterlab         conda-forge/noarch::jupyterlab-2.2.4-py_0
-  jupyterlab_server  conda-forge/noarch::jupyterlab_server-1.2.0-py_0
-  ld_impl_linux-64   conda-forge/linux-64::ld_impl_linux-64-2.34-hc38a660_9
-  libffi             conda-forge/linux-64::libffi-3.2.1-he1b5a44_1007
-  libgcc-ng          conda-forge/linux-64::libgcc-ng-9.3.0-h24d8f2e_14
-  libgomp            conda-forge/linux-64::libgomp-9.3.0-h24d8f2e_14
-  libsodium          conda-forge/linux-64::libsodium-1.0.18-h516909a_0
-  libstdcxx-ng       conda-forge/linux-64::libstdcxx-ng-9.3.0-hdf63c60_14
-  libuuid            conda-forge/linux-64::libuuid-2.32.1-h14c3975_1000
-  libuv              conda-forge/linux-64::libuv-1.38.0-h516909a_0
-  markupsafe         conda-forge/linux-64::markupsafe-1.1.1-py38h1e0a361_1
-  mistune            conda-forge/linux-64::mistune-0.8.4-py38h1e0a361_1001
-  nbconvert          conda-forge/linux-64::nbconvert-5.6.1-py38h32f6830_1
-  nbformat           conda-forge/noarch::nbformat-5.0.7-py_0
-  ncurses            conda-forge/linux-64::ncurses-6.2-he1b5a44_1
-  nodejs             conda-forge/linux-64::nodejs-14.8.0-h568c755_0
-  notebook           conda-forge/linux-64::notebook-6.1.1-py38h32f6830_0
-  openssl            conda-forge/linux-64::openssl-1.1.1g-h516909a_1
-  packaging          conda-forge/noarch::packaging-20.4-pyh9f0ad1d_0
-  pandoc             conda-forge/linux-64::pandoc-2.10.1-h516909a_0
-  pandocfilters      conda-forge/noarch::pandocfilters-1.4.2-py_1
-  parso              conda-forge/noarch::parso-0.8.0-pyh9f0ad1d_0
-  pexpect            conda-forge/linux-64::pexpect-4.8.0-py38h32f6830_1
-  pickleshare        conda-forge/linux-64::pickleshare-0.7.5-py38h32f6830_1001
-  pip                conda-forge/noarch::pip-20.2.2-py_0
-  prometheus_client  conda-forge/noarch::prometheus_client-0.8.0-pyh9f0ad1d_0
-  prompt-toolkit     conda-forge/noarch::prompt-toolkit-3.0.6-py_0
-  ptvsd              conda-forge/linux-64::ptvsd-4.3.2-py38h516909a_1
-  ptyprocess         conda-forge/noarch::ptyprocess-0.6.0-py_1001
-  pycparser          conda-forge/noarch::pycparser-2.20-pyh9f0ad1d_2
-  pygments           conda-forge/noarch::pygments-2.6.1-py_0
-  pyopenssl          conda-forge/noarch::pyopenssl-19.1.0-py_1
-  pyparsing          conda-forge/noarch::pyparsing-2.4.7-pyh9f0ad1d_0
-  pyrsistent         conda-forge/linux-64::pyrsistent-0.16.0-py38h1e0a361_0
-  pysocks            conda-forge/linux-64::pysocks-1.7.1-py38h32f6830_1
-  python             conda-forge/linux-64::python-3.8.5-h4d41432_2_cpython
-  python-dateutil    conda-forge/noarch::python-dateutil-2.8.1-py_0
-  python_abi         conda-forge/linux-64::python_abi-3.8-1_cp38
-  pyzmq              conda-forge/linux-64::pyzmq-19.0.2-py38ha71036d_0
-  readline           conda-forge/linux-64::readline-8.0-he28a2e2_2
-  requests           conda-forge/noarch::requests-2.24.0-pyh9f0ad1d_0
-  send2trash         conda-forge/noarch::send2trash-1.5.0-py_0
-  setuptools         conda-forge/linux-64::setuptools-49.3.1-py38h32f6830_0
-  six                conda-forge/noarch::six-1.15.0-pyh9f0ad1d_0
-  sqlite             conda-forge/linux-64::sqlite-3.32.3-hcee41ef_1
-  terminado          conda-forge/linux-64::terminado-0.8.3-py38h32f6830_1
-  testpath           conda-forge/noarch::testpath-0.4.4-py_0
-  tk                 conda-forge/linux-64::tk-8.6.10-hed695b0_0
-  tornado            conda-forge/linux-64::tornado-6.0.4-py38h1e0a361_1
-  traitlets          conda-forge/linux-64::traitlets-4.3.3-py38h32f6830_1
-  urllib3            conda-forge/noarch::urllib3-1.25.10-py_0
-  wcwidth            conda-forge/noarch::wcwidth-0.2.5-pyh9f0ad1d_1
-  webencodings       conda-forge/noarch::webencodings-0.5.1-py_1
-  wheel              conda-forge/noarch::wheel-0.34.2-py_1
-  xeus               conda-forge/linux-64::xeus-0.24.1-h4d8c418_0
-  xeus-python        conda-forge/linux-64::xeus-python-0.8.0-py38hbf85e49_0
-  xz                 conda-forge/linux-64::xz-5.2.5-h516909a_1
-  zeromq             conda-forge/linux-64::zeromq-4.3.2-he1b5a44_3
-  zipp               conda-forge/noarch::zipp-3.1.0-py_0
-  zlib               conda-forge/linux-64::zlib-1.2.11-h516909a_1007
+\_libgcc_mutex conda-forge/linux-64::\_libgcc_mutex-0.1-conda_forge
+\_openmp_mutex conda-forge/linux-64::\_openmp_mutex-4.5-1_gnu
+argon2-cffi conda-forge/linux-64::argon2-cffi-20.1.0-py38h1e0a361_1
+attrs conda-forge/noarch::attrs-19.3.0-py_0
+backcall conda-forge/noarch::backcall-0.2.0-pyh9f0ad1d_0
+backports conda-forge/noarch::backports-1.0-py_2
+backports.functoo~ conda-forge/noarch::backports.functools_lru_cache-1.6.1-py_0
+bleach conda-forge/noarch::bleach-3.1.5-pyh9f0ad1d_0
+brotlipy conda-forge/linux-64::brotlipy-0.7.0-py38h1e0a361_1000
+ca-certificates conda-forge/linux-64::ca-certificates-2020.6.20-hecda079_0
+certifi conda-forge/linux-64::certifi-2020.6.20-py38h32f6830_0
+cffi conda-forge/linux-64::cffi-1.14.1-py38h5bae8af_0
+chardet conda-forge/linux-64::chardet-3.0.4-py38h32f6830_1006
+cryptography conda-forge/linux-64::cryptography-3.0-py38h766eaa4_0
+decorator conda-forge/noarch::decorator-4.4.2-py_0
+defusedxml conda-forge/noarch::defusedxml-0.6.0-py_0
+entrypoints conda-forge/linux-64::entrypoints-0.3-py38h32f6830_1001
+icu conda-forge/linux-64::icu-67.1-he1b5a44_0
+idna conda-forge/noarch::idna-2.10-pyh9f0ad1d_0
+importlib-metadata conda-forge/linux-64::importlib-metadata-1.7.0-py38h32f6830_0
+importlib_metadata conda-forge/noarch::importlib_metadata-1.7.0-0
+ipykernel conda-forge/linux-64::ipykernel-5.3.4-py38h23f93f0_0
+ipython conda-forge/linux-64::ipython-7.17.0-py38h1cdfbd6_0
+ipython_genutils conda-forge/noarch::ipython_genutils-0.2.0-py_1
+jedi conda-forge/linux-64::jedi-0.15.2-py38_0
+jinja2 conda-forge/noarch::jinja2-2.11.2-pyh9f0ad1d_0
+json5 conda-forge/noarch::json5-0.9.4-pyh9f0ad1d_0
+jsonschema conda-forge/linux-64::jsonschema-3.2.0-py38h32f6830_1
+jupyter_client conda-forge/noarch::jupyter_client-6.1.6-py_0
+jupyter_core conda-forge/linux-64::jupyter_core-4.6.3-py38h32f6830_1
+jupyterlab conda-forge/noarch::jupyterlab-2.2.4-py_0
+jupyterlab_server conda-forge/noarch::jupyterlab_server-1.2.0-py_0
+ld_impl_linux-64 conda-forge/linux-64::ld_impl_linux-64-2.34-hc38a660_9
+libffi conda-forge/linux-64::libffi-3.2.1-he1b5a44_1007
+libgcc-ng conda-forge/linux-64::libgcc-ng-9.3.0-h24d8f2e_14
+libgomp conda-forge/linux-64::libgomp-9.3.0-h24d8f2e_14
+libsodium conda-forge/linux-64::libsodium-1.0.18-h516909a_0
+libstdcxx-ng conda-forge/linux-64::libstdcxx-ng-9.3.0-hdf63c60_14
+libuuid conda-forge/linux-64::libuuid-2.32.1-h14c3975_1000
+libuv conda-forge/linux-64::libuv-1.38.0-h516909a_0
+markupsafe conda-forge/linux-64::markupsafe-1.1.1-py38h1e0a361_1
+mistune conda-forge/linux-64::mistune-0.8.4-py38h1e0a361_1001
+nbconvert conda-forge/linux-64::nbconvert-5.6.1-py38h32f6830_1
+nbformat conda-forge/noarch::nbformat-5.0.7-py_0
+ncurses conda-forge/linux-64::ncurses-6.2-he1b5a44_1
+nodejs conda-forge/linux-64::nodejs-14.8.0-h568c755_0
+notebook conda-forge/linux-64::notebook-6.1.1-py38h32f6830_0
+openssl conda-forge/linux-64::openssl-1.1.1g-h516909a_1
+packaging conda-forge/noarch::packaging-20.4-pyh9f0ad1d_0
+pandoc conda-forge/linux-64::pandoc-2.10.1-h516909a_0
+pandocfilters conda-forge/noarch::pandocfilters-1.4.2-py_1
+parso conda-forge/noarch::parso-0.8.0-pyh9f0ad1d_0
+pexpect conda-forge/linux-64::pexpect-4.8.0-py38h32f6830_1
+pickleshare conda-forge/linux-64::pickleshare-0.7.5-py38h32f6830_1001
+pip conda-forge/noarch::pip-20.2.2-py_0
+prometheus_client conda-forge/noarch::prometheus_client-0.8.0-pyh9f0ad1d_0
+prompt-toolkit conda-forge/noarch::prompt-toolkit-3.0.6-py_0
+ptvsd conda-forge/linux-64::ptvsd-4.3.2-py38h516909a_1
+ptyprocess conda-forge/noarch::ptyprocess-0.6.0-py_1001
+pycparser conda-forge/noarch::pycparser-2.20-pyh9f0ad1d_2
+pygments conda-forge/noarch::pygments-2.6.1-py_0
+pyopenssl conda-forge/noarch::pyopenssl-19.1.0-py_1
+pyparsing conda-forge/noarch::pyparsing-2.4.7-pyh9f0ad1d_0
+pyrsistent conda-forge/linux-64::pyrsistent-0.16.0-py38h1e0a361_0
+pysocks conda-forge/linux-64::pysocks-1.7.1-py38h32f6830_1
+python conda-forge/linux-64::python-3.8.5-h4d41432_2_cpython
+python-dateutil conda-forge/noarch::python-dateutil-2.8.1-py_0
+python_abi conda-forge/linux-64::python_abi-3.8-1_cp38
+pyzmq conda-forge/linux-64::pyzmq-19.0.2-py38ha71036d_0
+readline conda-forge/linux-64::readline-8.0-he28a2e2_2
+requests conda-forge/noarch::requests-2.24.0-pyh9f0ad1d_0
+send2trash conda-forge/noarch::send2trash-1.5.0-py_0
+setuptools conda-forge/linux-64::setuptools-49.3.1-py38h32f6830_0
+six conda-forge/noarch::six-1.15.0-pyh9f0ad1d_0
+sqlite conda-forge/linux-64::sqlite-3.32.3-hcee41ef_1
+terminado conda-forge/linux-64::terminado-0.8.3-py38h32f6830_1
+testpath conda-forge/noarch::testpath-0.4.4-py_0
+tk conda-forge/linux-64::tk-8.6.10-hed695b0_0
+tornado conda-forge/linux-64::tornado-6.0.4-py38h1e0a361_1
+traitlets conda-forge/linux-64::traitlets-4.3.3-py38h32f6830_1
+urllib3 conda-forge/noarch::urllib3-1.25.10-py_0
+wcwidth conda-forge/noarch::wcwidth-0.2.5-pyh9f0ad1d_1
+webencodings conda-forge/noarch::webencodings-0.5.1-py_1
+wheel conda-forge/noarch::wheel-0.34.2-py_1
+xeus conda-forge/linux-64::xeus-0.24.1-h4d8c418_0
+xeus-python conda-forge/linux-64::xeus-python-0.8.0-py38hbf85e49_0
+xz conda-forge/linux-64::xz-5.2.5-h516909a_1
+zeromq conda-forge/linux-64::zeromq-4.3.2-he1b5a44_3
+zipp conda-forge/noarch::zipp-3.1.0-py_0
+zlib conda-forge/linux-64::zlib-1.2.11-h516909a_1007
 
 ```
 
@@ -221,8 +235,10 @@ I first followed this - https://blog.jupyter.org/a-visual-debugger-for-jupyter-9
 **That is without creating a new conda environment**
 
 ```
+
 pip install xeus-python==0.7.1
 pip install ptvsd
+
 ```
 
 The debugger front-end can be installed as a JupyterLab extension. run:
@@ -261,3 +277,7 @@ Furthermore it does not provide an option to perform only a subset of the sugges
 
 You can add `--debug` option to the conda command and see the output from console(or terminal). For example, type `conda update --debug numpy`.
 From the output, we can see that the client requests `repodata.json` from channel list and do some computation locally in the `Solving Environment` Step.
+
+```
+
+```

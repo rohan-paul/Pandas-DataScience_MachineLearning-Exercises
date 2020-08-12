@@ -52,3 +52,5 @@ $ ls -lh /root/anaconda3/envs/myenv2/lib/python3.7/site-packages/matplotlib/mpl-
 The '3' after the permissions and before the file and group owner is the number of hard-links associated with a file. Normally a file has only one. Each environment must create another hard-link to the same file.
 
 https://stackoverflow.com/questions/57717410/do-separate-anaconda-environments-install-the-same-package-twice-taking-up-twic
+
+**So what conda does is - t leverages hardlinks - conda install all the packages on a central location and then when installed in a specific environment create a link to the directory rather than installing it there**
