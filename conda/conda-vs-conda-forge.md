@@ -2,6 +2,18 @@
 
 **Conda and conda-forge are both Python package managers. What is the appropriate choice when a package exists in both repositories? Django, for example, can be installed with either, but the difference between the two is several dependencies (conda-forge has many more).**
 
+The short answer is that, in my experience generally, it doesn't matter which you use.
+
+The long answer:
+
+So `conda-forge` is an additional channel from which packages may be installed. In this sense, it is not any more special than the default channel, or any of the other hundreds (thousands?) of channels that people have posted packages to. You can add your own channel if you sign up at https://anaconda.org and upload your own Conda packages.
+
+**Here we need to make the distinction, which I think you're not clear about from your phrasing in the question, between `conda`, the cross-platform package manager, and `conda-forge`, the package channel.**
+
+Anaconda Inc. (formerly Continuum IO), the main developers of the `conda` software, also maintain a separate channel of packages, which is the default when you type `conda install packagename` without changing any options.
+
+---
+
 To see your channel configuration, you can write:
 
     conda config --show channels
