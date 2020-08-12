@@ -56,6 +56,8 @@ and further on
 
 > Occasionally a package is needed which is not available as a conda package but is available on PyPI and can be installed with pip. In these cases, it makes sense to try to use both conda and pip.
 
+Conda and pip serve different purposes, they are NOT competitors and only directly compete in a small subset of tasks: namely installing Python packages in isolated environments.
+
 https://stackoverflow.com/questions/20994716/what-is-the-difference-between-pip-and-conda
 
 https://www.anaconda.com/blog/understanding-conda-and-pip

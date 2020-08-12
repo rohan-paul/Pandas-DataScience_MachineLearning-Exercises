@@ -10,6 +10,8 @@ Assuming you have Anaconda installed, simply run:
 
 `conda install -c conda-forge jupyterlab`
 
+**In above the "-c" stands for channel - meaning with above command jupyterlab will be downloaded from conda-forge channel**
+
 **Step 2 – Install Jupyterlab using Pip**
 
 **This is what I followed in my Ubuntu 20.04**

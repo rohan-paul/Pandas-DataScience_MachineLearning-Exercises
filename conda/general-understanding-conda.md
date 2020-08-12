@@ -1,3 +1,5 @@
+**Conda is a package manager; Anaconda is a distribution. Although Conda is packaged with Anaconda, the two are distinct entities with distinct goals.**
+
 ### What does conda do when “solving environment”
 
 **[SO question](https://stackoverflow.com/questions/51753988/what-does-conda-do-when-solving-environment)**

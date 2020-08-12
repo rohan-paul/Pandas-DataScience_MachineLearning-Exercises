@@ -38,5 +38,19 @@ for more options.
 
 With all of that said, there are four main reasons to use the `conda-forge` channel instead of the `defaults` channel maintained by Anaconda:
 
-1. Packages on `conda-forge` _may_ be more up-to-date than those on the `defaults` channel
+1. Packages on `conda-forge` _may_ be more up-to-date than those on the `defaults` channel. The `conda-forge` channel is where you can find packages that have been built for conda but yet to be part of the official Anaconda distribution.
 2. There are packages on the `conda-forge` channel that aren't available from `defaults`
+
+#### Command to download from specific Channel
+
+When I run below to install [**jupyterlab/debugger**](https://github.com/jupyterlab/debugger)
+
+`conda create -n jupyterlab-debugger -c conda-forge xeus-python=0.8.0 notebook=6 jupyterlab=2 ptvsd nodejs`
+
+**In above the "-c" stands for channel - meaning with above command jupyterlab-debugger will be downloaded from conda-forge channel**
+
+Then activate that with `conda activate jupyterlab-debugger`
+
+Then, run the following command to install the extension:
+
+`jupyter labextension install @jupyterlab/debugger`

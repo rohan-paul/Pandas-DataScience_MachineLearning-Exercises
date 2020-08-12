@@ -38,15 +38,17 @@ Windows: `activate` or `deactivate`
 
 Linux and macOS: `source activate` or `source deactivate`
 
-**Make exact copy of an environment**
+**Make exact copy / clone of an environment**
 
 **conda create --clone py35 --name py35-2**
 
-So when I run below to install [**jupyterlab/debugger**](https://github.com/jupyterlab/debugger)
+#### Downloading from specific Channel
+
+When I run below to install [**jupyterlab/debugger**](https://github.com/jupyterlab/debugger)
 
 `conda create -n jupyterlab-debugger -c conda-forge xeus-python=0.8.0 notebook=6 jupyterlab=2 ptvsd nodejs`
 
-It means I am creating an exact copy of **conda-forge**
+**In above the "-c" stands for channel - meaning with above command jupyterlab-debugger will be downloaded from conda-forge channel**
 
 Then activate that with `conda activate jupyterlab-debugger`
 
@@ -57,3 +59,7 @@ Then, run the following command to install the extension:
 ### To delete or remove the environment, type the following in your terminal:
 
 `conda remove --name env_name --all`
+
+### Some more reference
+
+https://conda.io/projects/conda/en/latest/commands.html

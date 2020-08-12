@@ -22,11 +22,13 @@ The above line literally says: Create an environment using the conda create comm
 
 **conda create --clone py35 --name py35-2**
 
-So when I run below to install [**jupyterlab/debugger**](https://github.com/jupyterlab/debugger)
+#### Downloading from specific Channel
+
+When I run below to install [**jupyterlab/debugger**](https://github.com/jupyterlab/debugger)
 
 `conda create -n jupyterlab-debugger -c conda-forge xeus-python=0.8.0 notebook=6 jupyterlab=2 ptvsd nodejs`
 
-It means I am creating an exact copy of **conda-forge**
+**In above the "-c" stands for channel - meaning with above command jupyterlab-debugger will be downloaded from conda-forge channel**
 
 Then activate that with `conda activate jupyterlab-debugger`
 
@@ -37,3 +39,24 @@ Then, run the following command to install the extension:
 ### To delete or remove the environment, type the following in your terminal:
 
 `conda remove --name env_name --all`
+
+#### I installed several conda packages in `/usr/local/pkgs`, and created a new environment with `conda create --name env1`. Will this environment by default include all the packages in `/usr/local/pkgs`, or will it include only the packages that are shipped by default with conda?
+
+**And the ans to above is**
+
+No, it does NOT automatically include all those packages. If you want it to, you can use
+
+**`conda create --name env1 --clone base`**
+
+**But it's generally not recommended to clone **base** since it includes additional packages only **base** needs.**
+
+You can check what is installed in an env with
+
+    conda list --name env1
+
+OR after activating the env
+
+```
+conda activate envname
+conda list
+```
