@@ -67,17 +67,13 @@ Linux and macOS: `source activate` or `source deactivate`
 
 If you want Jupyter notebooks to see your new environment, you need a couple of extra instructions. Jupyter sees the different environments as different kernels. Once we create a new environment, we need to tell Jupyter that it is there:
 
-# Note you'll want to do this in the new environment.
+**Note you'll want to do this in the new environment.**
 
-# First we will need the ipykernel package
+**First we will need the ipykernel package**
 
 **`(test_env) $ conda install ipykernel`**
 
-# This tells jupyter to take the current environment (test_env)
-
-# and make a "kernel" option named "test kernel" in the
-
-# kernel menu
+This tells jupyter to take the current environment (test_env) and make a "kernel" option named "test kernel" in the kernel menu
 
 **`(test_env) $ python -m ipykernel install --user --name myenv --display-name "test kernel"`**
 
@@ -109,3 +105,21 @@ OR after activating the env
 conda activate envname
 conda list
 ```
+
+### Make my new environment exportable and usable by others
+
+Now you want to make an environment.yaml file that will allow others to recreate the environment from scratch. To make this file, we use the export command and send the output to environment.yaml:
+
+**while in test_env, export the packages used to an environment file**
+
+**`(test_env) \$ conda env export > environment.yaml`**
+
+Once we are done with the environment, we can deactivate and delete the environment:
+
+**Leave the environment**
+
+(test_env) \$ source deactivate
+
+**Now we are no longer in test_env, we can delete it**
+
+`$ conda env remove --name test_env`
