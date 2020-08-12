@@ -12,6 +12,12 @@ Windows: `activate` or `deactivate`
 
 Linux and macOS: `source activate` or `source deactivate`
 
+### create a Python virtual environment
+
+`conda create --name env_name python=3.7`
+
+The above line literally says: Create an environment using the conda create command whose name is env_name (you can choose any name) that runs on python=3.7
+
 #### Command To Make exact copy of an environment
 
 **conda create --clone py35 --name py35-2**
@@ -27,3 +33,7 @@ Then activate that with `conda activate jupyterlab-debugger`
 Then, run the following command to install the extension:
 
 `jupyter labextension install @jupyterlab/debugger`
+
+### To delete or remove the environment, type the following in your terminal:
+
+`conda remove --name env_name --all`
