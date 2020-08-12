@@ -18,6 +18,8 @@ conda activate myenv2
 conda install matplotlib
 ```
 
+### Ans
+
 **No it doesn't take up twice the storage.**
 
 Environments by default are created in the `envs` folder under the directory you installed anaconda in. For me that is `$HOME/anaconda3`. After each install you want to run `du -sh $HOME/anaconda3/envs` to see a summary of disk space used in human readable format.
@@ -54,3 +56,9 @@ The '3' after the permissions and before the file and group owner is the number 
 https://stackoverflow.com/questions/57717410/do-separate-anaconda-environments-install-the-same-package-twice-taking-up-twic
 
 **So what conda does is - t leverages hardlinks - conda install all the packages on a central location and then when installed in a specific environment create a link to the directory rather than installing it there**
+
+### Another quick inspection
+
+`conda create -n jupyterlab-debugger -c conda-forge xeus-python=0.8.0 notebook=6 jupyterlab=2 ptvsd nodejs`
+
+![](assets/2020-08-13-01-16-53.png)

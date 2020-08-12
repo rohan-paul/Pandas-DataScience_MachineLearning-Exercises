@@ -15,5 +15,3 @@ In the environments list that displays, you should see both the source environme
 #### Does cloning takes up extra space ?
 
 **My **`~/.anaconda3`** directory before running below command**
-
-![](assets/2020-08-13-01-16-53.png)

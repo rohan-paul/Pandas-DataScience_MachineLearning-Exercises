@@ -226,6 +226,10 @@ zlib conda-forge/linux-64::zlib-1.2.11-h516909a_1007
 
 ```
 
+And after I put "Yes" and all packages are installed. Terminal itself will tell me
+
+![](assets/2020-08-13-02-31-59.png)
+
 ---
 
 ### Issue while installing
