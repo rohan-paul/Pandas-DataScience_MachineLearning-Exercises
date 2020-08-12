@@ -55,10 +55,14 @@ The '3' after the permissions and before the file and group owner is the number 
 
 https://stackoverflow.com/questions/57717410/do-separate-anaconda-environments-install-the-same-package-twice-taking-up-twic
 
-**So what conda does is - t leverages hardlinks - conda install all the packages on a central location and then when installed in a specific environment create a link to the directory rather than installing it there**
+**So what conda does is - it leverages hardlinks - conda install all the packages on a central location and then when installed in a specific environment create a link to the directory rather than installing it there**
 
-### Another quick inspection
+##### Another quick inspection While Installing [jupyterlab/debugger](https://github.com/jupyterlab/debugger) following official guide
 
 `conda create -n jupyterlab-debugger -c conda-forge xeus-python=0.8.0 notebook=6 jupyterlab=2 ptvsd nodejs`
 
 ![](assets/2020-08-13-01-16-53.png)
+
+**Ans seems to be Yes, NOT exactly twice the space, but for me 645MB of extra space was required. While before creating a new env `/home/paul/anaconda3` was 3.7GB**
+
+Note below steps by noting the below case

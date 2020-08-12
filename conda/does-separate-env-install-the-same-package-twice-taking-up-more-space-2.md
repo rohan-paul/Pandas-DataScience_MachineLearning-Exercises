@@ -1,6 +1,8 @@
 ### Do separate Anaconda environments install the same package twice, taking up twice the storage?
 
-**Ans seems to be Yes, by noting the below case**
+**Ans seems to be Yes, NOT exactly twice the space, but for me 645MB of extra space was required. While before creating a new env `/home/paul/anaconda3` was 3.7GB**
+
+Note below steps by noting the below case
 
 ##### Installing [jupyterlab/debugger](https://github.com/jupyterlab/debugger) following official guide
 
@@ -235,3 +237,5 @@ And after I put "Yes" and all packages are installed. Terminal itself will tell 
 ![](assets/2020-08-13-02-31-59.png)
 
 **And now I can see around 645MB of packages have been installed extra in `/home/paul/anaconda3/envs/jupyterlab-debugger`**
+
+**Anaconda includes a long list of packages that get installed automatically into each environment that you create. **
