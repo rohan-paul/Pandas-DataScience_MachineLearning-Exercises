@@ -42,3 +42,15 @@ Step 4 – Starting Jupyterlab
 **`jupyter lab`**
 
 [https://www.ceos3c.com/open-source/install-jupyterlab-on-ubuntu-18-04/](https://www.ceos3c.com/open-source/install-jupyterlab-on-ubuntu-18-04/)
+
+#### the-version-of-my-jupyter-notebook
+
+```
+jupyter notebook --version
+```
+
+And if you simply you can run this:
+
+`jupyter --version`
+
+Then all the Jupyterlab related tool's version (including jupyter-lab) will be printed.
