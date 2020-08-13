@@ -265,6 +265,20 @@ And then it gave output the 2 packages (**anaconda** and **python-language-s**) 
 
 ---
 
+#### After following the official guide to install it in a new environmen and running with `xpython` I was still NOT seeging the small slider on ther top right corner for the switching on the debugger
+
+**[Because of this open issue](https://github.com/jupyterlab/debugger/issues/475)**
+
+So following the issue pages's recomendation - I installed **[nb_conda_kernels](https://github.com/Anaconda-Platform/nb_conda_kernels)** to this new conda environment that I just created.
+
+```
+conda install -n jupyterlab-debugger nb_conda_kernels
+```
+
+The above command is for installing a package ONLY to a specific conda environment. So Terminal gave me below
+
+![](assets/2020-08-13-15-11-56.png)
+
 #### Reading
 
 https://blog.jupyter.org/a-visual-debugger-for-jupyter-914e61716559

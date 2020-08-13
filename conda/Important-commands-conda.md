@@ -44,6 +44,53 @@ For a concrete example, let's assume that you want to install [chainer](http://c
 
 `conda install --name chainerenv -c anaconda chainer`
 
+#### To list all of the packages in the active environment, use:
+
+`conda list`
+
+To list all of the packages in a deactivated environment, use:
+
+`conda list -n myenv`
+
+### To check if a specific package is installed:
+
+    `conda list html5lib`
+
+which outputs something like this if installed:
+
+```
+    # packages in environment at C:\ProgramData\Anaconda3:
+    #
+    # Name                    Version                   Build  Channel
+    html5lib                  1.0.1                    py37_0
+
+```
+
+or something like this if not installed:
+
+```
+    # packages in environment at C:\ProgramData\Anaconda3:
+    #
+    # Name                    Version                   Build  Channel
+
+```
+
+you don't need to type the exact package name. Partial matches are supported:
+
+    `conda list html`
+
+This outputs all installed packages containing 'html':
+
+```
+    # packages in environment at C:\ProgramData\Anaconda3:
+    #
+    # Name                    Version                   Build  Channel
+    html5lib                  1.0.1                    py37_0
+    sphinxcontrib-htmlhelp    1.0.2                      py_0
+    sphinxcontrib-serializinghtml 1.1.3                      py_0
+
+```
+
 #### Display Conda environment information
 
 `conda info`
