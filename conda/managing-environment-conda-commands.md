@@ -69,6 +69,10 @@ This tells jupyter to take the current environment (test_env) and make a "kernel
 
 **`(test_env) $ python -m ipykernel install --user --name myenv --display-name "test kernel"`**
 
+For example if my newly created env name is **"jupyterlab-debugger"** I need to run the below command (which is slightly simplified version of the above)
+
+`python -m ipykernel install --user --name=jupyterlab-debugger`
+
 https://stackoverflow.com/a/53546634/1902852
 
 https://medium.com/@nrk25693/how-to-add-your-conda-environment-to-your-jupyter-notebook-in-just-4-steps-abeab8b8d084

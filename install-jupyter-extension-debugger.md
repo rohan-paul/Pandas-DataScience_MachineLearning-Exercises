@@ -4,7 +4,9 @@ It is generally recommended to create a new `conda` environment to install the d
 
 ```bash
 conda create -n jupyterlab-debugger -c conda-forge xeus-python=0.8.0 notebook=6 jupyterlab=2 ptvsd nodejs
+
 conda activate jupyterlab-debugger
+
 ```
 
 Then, run the following command to install the extension:
