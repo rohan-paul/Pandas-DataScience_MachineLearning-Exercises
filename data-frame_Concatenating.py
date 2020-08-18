@@ -3,7 +3,8 @@ import pandas as pd
 
 surveys_df = pd.read_csv("./surveys.csv", keep_default_na=False, na_values=[""])
 
-''' Take note that the read_csv method we used can take some additional options which we didn’t use previously. Many functions in Python have a set of options that can be set by the user if needed. In this case, we have told pandas to assign empty values in our CSV to NaN keep_default_na=False, na_values=[""]. '''
+''' 
+Take note that the read_csv method we used can take some additional options which we didn’t use previously. Many functions in Python have a set of options that can be set by the user if needed. In this case, we have told pandas to assign empty values in our CSV to NaN keep_default_na=False, na_values=[""]. '''
 
 # Concatenating DataFrames
 
