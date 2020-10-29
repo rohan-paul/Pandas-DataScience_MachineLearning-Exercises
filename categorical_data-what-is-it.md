@@ -17,3 +17,25 @@ As a signal to other python libraries that this column should be treated as a ca
 ---
 
 https://www.kaggle.com/getting-started/27270
+
+```python
+import pandas as pd
+import numpy as np
+
+# Here's the sample data we'll be using for this guide:
+
+data = pd.DataFrame(
+       [['female', 'New York', 'low', 4], ['female', 'London', 'medium', 3], ['male', 'New Delhi', 'high', 2]],
+       columns=['Gender', 'City', 'Temperature', 'Rating'])
+data
+```
+
+![](a2020-10-29-15-58-17.png)
+
+What can we learn from the sample data? Each feature has different qualities:
+
+- All of the features are categorical data. Most are strings, one is numeric.
+- Gender is a binary category. It's either male of female.
+- City is nominal category. This is because it's not meaningful to order the cities in any way.
+- Temperature is an ordinal category. This is because there is a meaningful order to the category - i.e. greater-than and less-than comparisons are meaningful.
+- Rating is also ordinal category, and it's already in numeric form. In addition to greater-than and less-than comparsions, in this case math operations like addition and subtraction are meaningful.
