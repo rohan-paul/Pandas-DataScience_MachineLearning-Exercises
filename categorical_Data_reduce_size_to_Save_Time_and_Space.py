@@ -32,8 +32,10 @@ dtype: int64
 '''
 
 categorize_map = {v: k for k, v in enumerate(cities.unique())}
+
 # encoding the object as an enumerated type (categorical variable).
 as_categories = cities.map(categorize_map)
+
 print(as_categories.apply(sys.getsizeof))
 
 '''
