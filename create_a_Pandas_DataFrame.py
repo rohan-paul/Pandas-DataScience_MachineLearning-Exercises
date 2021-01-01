@@ -19,3 +19,7 @@ print(pd.DataFrame(data=data[1:, 1:],
 Row1    1    2
 Row2    3    4
 '''
+
+# **************** 2nd way ********************
+a = pd.DataFrame([[4, 5], [12,31]])
+print(a)
