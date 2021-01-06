@@ -5,3 +5,4 @@ print(a)
 
 a_array = a.iloc[:, 0].values
 print(a_array)
+# [ 4 12]
