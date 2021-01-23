@@ -1,22 +1,27 @@
 ### Google drive gives warning about not being able to scan with following code - COULD NOT READ WITH 15 mint of research - 19-Jan-2021
 
-```
-g_drive_url = 'https://drive.google.com/file/d/179KnOUR-GTPl2SQRte4imcWV5XAHVvFS/view?usp=sharing'
+Basically for small files, I have to pass the url in below format, i.e.
 
-file_id = g_drive_url.split('/')[-2]
-
-dwn_url='https://drive.google.com/uc?export=download&id=' + file_id
-
-url = requests.get(dwn_url).text
-
-csv_raw = StringIO(url)
-
-donor_choose_df_org  = pd.read_csv(csv_raw, nrows=5000)
-```
+'https://drive.google.com/uc?export=download&id=' +'id_of_the_file'
 
 ```
-<!DOCTYPE html><html><head><meta name="google" content="notranslate"><meta http-equiv="X-UA-Compatible" content="IE=edge;"><style>@font-face{font-family:'Roboto';font-style:italic;font-weight:400;src:url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xIIzc.ttf)format('truetype');}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc9.ttf)format('truetype');}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf)format('truetype');}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;src:url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc9.ttf)format('truetype');}</style><meta name="referrer" content="origin"><title>train.zip - Google Drive</title><meta property="og:title" content="train.zip"><meta property="og:type" content="article"><meta property="og:site_name" content="Google Docs"><meta property="og:url" content="https://drive.google.com/file/d/1-BnjmSpTyQn5fSl0N5Gs2OWAZu16UJwN/view?usp=sharing&amp;usp=embed_facebook"><link rel="shortcut icon" href="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:300
+https://drive.google.com/uc?export=download&id=1-WDVUwSdq5wKKCqnGl67EXz5u2BtRpR6
+
 ```
+
+BUT ON 23-JAN-2021 AFTER 3 HOURS OF RESEARCH, I COULD NOT FIND A WAY TO READ CSV FILES ( > 100 mb ) LIKE THIS WAY. SEEMS LIKE THERE'S NONE.
+
+Only way is to use some form of actually downloading the file in local drive by invoking google-auth api etc (for which there's a few pip packages)
+
+#### Further Reading
+
+https://stackoverflow.com/questions/64731772/in-python-how-to-read-a-large-csv-that-is-in-google-drive - This SO question was asked in Nov-2020 and remains unanswered.
+
+https://stackoverflow.com/questions/56611698/pandas-how-to-read-csv-file-from-google-drive-public
+
+---
+
+Same instruction in YT Video which works only for smaller files - https://www.youtube.com/watch?v=UUYdEUBbmzU&ab_channel=IndianAIProduction
 
 ---
 
