@@ -13,11 +13,10 @@ ax: A single object of the axes.Axes object if there is only one plot, or an arr
 
 Here is an example on how to use the matplotlib.pyplot.subplots method:
 
-Line 1-2: Import matplotlib.pyplot for plotting and numpy for generating data to plot.
-Line 4: Generate a figure with 2 rows and 2 columns of subplots.
-Line 5: Generate some data using numpy.
-Line 7-10: Index the ax array to plot different subplots on the figure fig.
-Line 11: Output the figure.
+* Generate a figure with 2 rows and 2 columns of subplots.
+* Generate some data using numpy.
+* Index the ax array to plot different subplots on the figure fig.
+* Output the figure.
 
 ```
 import matplotlib.pyplot as plt
@@ -53,3 +52,42 @@ is more concise than this:
 
     fig = plt.figure()
     ax = fig.add_subplot(111)
+
+---
+
+### Parameter of subplots() - IMPORTANT
+
+https://stackoverflow.com/a/40420389/1902852
+
+#### `plt.subplot` takes three arguments, the number of rows (`nrows`), the number of columns (`ncols`) and the plot number. Using the 3-digit code is a convenience function provided for when `nrows`, `ncols` and `plot_number` are all `<10`.
+
+So, `211` is equivalent to `nrows=2`, `ncols=1`, `plot_number=1`.
+
+[From the docs][1]:
+
+Return a subplot axes positioned by the given grid definition.
+
+Typical call signature:
+
+    `subplot(nrows, ncols, plot_number) `
+
+ Where nrows and ncols are used to
+ notionally split the figure into `nrows * ncols` sub-axes, and
+ `plot_number` is used to identify the particular subplot that this
+ function is to create within the notional grid. `plot_number` starts at
+1, increments across rows first and has a maximum of `nrows * ncols`.
+
+ In the case when `nrows`, `ncols` and `plot_number` are all less than 10, a
+ convenience exists, such that the a 3 digit number can be given
+ instead, where the hundreds represent `nrows`, the tens represent `ncols`
+ and the units represent `plot_number`. For instance:
+
+     `subplot(211)`
+
+produces a subaxes in a figure which represents the top
+plot (i.e. the first) in a 2 row by 1 column notional grid (no grid
+actually exists, but conceptually this is how the returned subplot has
+been positioned).
+
+
+  [1]: http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.subplot
