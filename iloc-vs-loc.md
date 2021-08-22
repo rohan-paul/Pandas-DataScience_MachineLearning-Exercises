@@ -1,3 +1,22 @@
+### Selecting via a single value
+
+Both loc and iloc allow input to be a single value. We can use the following syntax for data selection:
+
+```
+loc[row_label, column_label]
+iloc[row_position, column_position]
+
+```
+
+https://towardsdatascience.com/how-to-use-loc-and-iloc-for-selecting-data-in-pandas-bd09cb4c3d79
+
+![](assets/2021-08-22-17-46-53.png)
+
+
+---
+
+https://www.analyticsvidhya.com/blog/2020/02/loc-iloc-pandas/
+
 **loc is label-based**, which means that we have to specify the name of the rows and columns that we need to filter out.
 
 For example, let’s say we search for the rows whose index is 1, 2 or 100. We will not get the first, second or the hundredth row here. Instead, we will get the results only if the name of any index is 1, 2 or 100.
